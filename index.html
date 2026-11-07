@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oops! I'm Late! 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #ffe0ec, #f6d9ff, #fff0d9);
+    min-height: 100vh;
+    color: #713c65;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 480px;
+    margin: 45px auto;
+    padding: 28px 20px;
+    background: rgba(255,255,255,0.78);
+    border-radius: 28px;
+    box-shadow: 0 10px 35px #bd86ad55;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 15px 0;
+    color: #d64c91;
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+p {
+    line-height: 1.7;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.emoji {
+    font-size: 65px;
+    margin: 15px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+button {
+    border: none;
+    padding: 14px 23px;
+    margin: 9px 5px;
+    border-radius: 30px;
+    background: #e95b9e;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 12px #e95b9e44;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.secondary {
+    background: #9c70c9;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    background: #fff0f7;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 20px;
+    line-height: 1.8;
+}
+
+.cake {
+    font-size: 90px;
+    margin: 15px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 23px;
+    animation: float 5s linear forwards;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#finalMessage {
+    font-size: 17px;
+    color: #bc4382;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    margin: 25px 0 5px;
+    font-size: 12px;
+    color: #a16c92;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="emoji">🙈</div>
+
+    <h1>OOPS!! I'M LATE!</h1>
+
+    <h2>Wait... Don't Go! 😭</h2>
+
+    <p>
+        I know your birthday was yesterday...
+        and here I am, arriving fashionably late!
+    </p>
+
+    <button onclick="showExcuse()">
+        Open my excuse 😂
+    </button>
+
+    <div id="excuse" class="hidden">
+        <p>
+            Your Honour, I plead NOT GUILTY! 🥺
+        </p>
+        <p>
+            I genuinely didn't know it was your birthday.
+            I wasn't ignoring you, I was just
+            living under a rock! 🪨
+        </p>
+        <p>
+            But hey, a coder's wish comes with
+            a little delay and extra features! 💻
+        </p>
+    </div>
+
+    <hr style="border:1px dashed #e9a7c8; margin:25px 0;">
+
+    <div class="cake">🎂</div>
+
+    <h2>HAPPY BELATED BIRTHDAY! 🎉</h2>
+
+    <p>
+        May your life be filled with happiness,
+        success, laughter and unlimited cake!
+    </p>
+
+    <button class="secondary" onclick="blowCandles()">
+        Blow the candles 🕯️
+    </button>
+
+    <div id="candles" class="hidden">
+        <h2>🎉 WHOOSH!! 🎉</h2>
+        <p>Your wishes are on their way! ✨</p>
+    </div>
+
+    <hr style="border:1px dashed #e9a7c8; margin:25px 0;">
+
+    <h2>One tiny question... 👀</h2>
+
+    <p>Will you forgive this late but innocent soul?</p>
+
+    <button onclick="forgive()">
+        YES, obviously! 💗
+    </button>
+
+    <button class="secondary" onclick="noForgive()">
+        NO! 😤
+    </button>
+
+    <div id="answer" class="hidden">
+        <h2>YAYYYYY!! 🥹💗</h2>
+        <p>Thank you for sparing my life!</p>
+    </div>
+
+    <hr style="border:1px dashed #e9a7c8; margin:25px 0;">
+
+    <button onclick="reveal()">
+        One last surprise 🎁
+    </button>
+
+    <div id="message" class="hidden">
+        <h2>A Little Message For You 💌</h2>
+
+        <p>
+            Dear Senior,
+        </p>
+
+        <p>
+            I may have missed the actual date,
+            but that doesn't mean you don't deserve
+            all the love and happiness in the world.
+        </p>
+
+        <p>
+            Thank you for being such a wonderful person.
+            I hope this new chapter brings you beautiful
+            memories, big achievements and endless smiles.
+        </p>
+
+        <p>
+            Stay amazing, keep shining and never stop
+            being the wonderful person you are! 🌷
+        </p>
+
+        <div id="finalMessage">
+            Once again, HAPPY BELATED BIRTHDAY! 💗
+        </div>
+
+        <h1>🎀🥳💐</h1>
+    </div>
+
+    <footer>
+        Made with 💗, a little guilt and lots of code.
+        <br>
+        From your junior, with love!
+    </footer>
+
+</div>
+
+<script>
+
+function showExcuse() {
+    document.getElementById("excuse").style.display = "block";
+}
+
+function blowCandles() {
+    document.getElementById("candles").style.display = "block";
+    confetti();
+}
+
+function forgive() {
+    document.getElementById("answer").style.display = "block";
+    confetti();
+}
+
+function noForgive() {
+    alert("Error 404: Forgiveness not found! 😂 Please try again!");
+}
+
+function reveal() {
+    document.getElementById("message").style.display = "block";
+    confetti();
+    document.getElementById("message").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+function confetti() {
+    const emojis = ["💗", "💕", "🎀", "✨", "🌸", "🥳"];
+
+    for (let i = 0; i < 25; i++) {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration =
+            (3 + Math.random() * 3) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }
+}
+
+setInterval(() => {
+    if (Math.random() > 0.5) {
+        confetti();
+    }
+}, 5000);
+
+</script>
+
+</body>
+</html>
